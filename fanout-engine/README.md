@@ -16,11 +16,13 @@ Key focus:
 FileIngestion (stream reader)
 
    |
+   
    v
    
 RecordParser (CSV / JSONL / FixedWidth)
    
    |
+   
    v
    
 FanOutEngine
@@ -33,13 +35,13 @@ FanOutEngine
    
    +--> SinkClient (mock)
    
-          - RestApiSink (HTTP/2 simulated)
+          RestApiSink (HTTP/2 simulated)
           
-          - GrpcSink (stream/unary simulated)
+          GrpcSink (stream/unary simulated)
           
-          - MessageQueueSink (producer simulated)
+          MessageQueueSink (producer simulated)
           
-          - WideColumnDbSink (batch write simulated)
+          WideColumnDbSink (batch write simulated)
 
 ## How Backpressure Works
 - The engine uses a **bounded queue** between ingestion and distribution.
