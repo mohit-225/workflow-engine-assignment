@@ -163,6 +163,17 @@ durable_db.trace.db
 
 ------------------------------------------------------------------------
 
+## Non-Functional Characteristics
+
+- Performance: Optimized for throughput and constant memory usage
+- Reliability: Crash-safe via persistence
+- Scalability: Extensible architecture
+- Maintainability: Clean separation of concerns
+- Extensibility: Strategy pattern for pluggable sinks
+- Backpressure handling (Assignment 2)
+
+------------------------------------------------------------------------
+
 ## Future Improvements
 
 -   Transactional boundaries
