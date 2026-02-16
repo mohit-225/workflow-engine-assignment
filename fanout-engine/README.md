@@ -14,19 +14,31 @@ Key focus:
 
 ## Architecture
 FileIngestion (stream reader)
+
    |
    v
+   
 RecordParser (CSV / JSONL / FixedWidth)
+   
    |
    v
+   
 FanOutEngine
+
    |
+   
    +--> Transformer (Strategy Pattern) per sink
+   
    |
+   
    +--> SinkClient (mock)
+   
           - RestApiSink (HTTP/2 simulated)
+          
           - GrpcSink (stream/unary simulated)
+          
           - MessageQueueSink (producer simulated)
+          
           - WideColumnDbSink (batch write simulated)
 
 ## How Backpressure Works
