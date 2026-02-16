@@ -24,15 +24,12 @@ steps are not re-executed
 ## Architecture
 
 App (Workflow Definition)
-
          ↓ 
          
 DurableExecutor (Core Engine)
-
          ↓
          
 StepStore(Persistence Layer)
-
          ↓
          
 H2 Embedded Database
