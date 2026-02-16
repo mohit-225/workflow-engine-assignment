@@ -1,13 +1,30 @@
 # Workflow Engine Assignments
 
-This repository contains:
+This repository contains two assignments:
 
 ## Assignment 1 – Durable Execution Engine
-Crash-safe deterministic workflow execution using H2 database.
+A crash-safe deterministic workflow engine using persistent H2 storage.
+
+Features:
+- Deterministic replay
+- Idempotent step execution
+- Crash recovery
+- Logical sequence clock
+
+Run:
+mvn exec:java -Dexec.mainClass="com.mohit.durable.App"
+
+---
 
 ## Assignment 2 – High Throughput Fan-Out Engine
-Streaming ingestion + transformation + multi-sink fan-out engine with backpressure.
+A streaming ingestion and multi-sink fan-out engine with backpressure.
 
-Both projects are runnable via Maven.
+Features:
+- Streaming file ingestion (constant memory)
+- Strategy Pattern transformations
+- Parallel processing
+- Backpressure using bounded queue
+- Multi-sink distribution (REST, gRPC, MQ, Wide DB)
 
-Refer to individual folder READMEs for details.
+Run:
+mvn exec:java -Dexec.mainClass="com.mohit.fanout.App"
