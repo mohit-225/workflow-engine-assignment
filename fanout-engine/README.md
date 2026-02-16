@@ -13,7 +13,6 @@ Key focus:
 - Extensible transformations (Strategy Pattern)
 
 ## Architecture
-```
 FileIngestion (stream reader)
    |
    v
@@ -29,7 +28,6 @@ FanOutEngine
           - GrpcSink (stream/unary simulated)
           - MessageQueueSink (producer simulated)
           - WideColumnDbSink (batch write simulated)
-```
 
 ## How Backpressure Works
 - The engine uses a **bounded queue** between ingestion and distribution.
