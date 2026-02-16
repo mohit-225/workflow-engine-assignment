@@ -87,7 +87,7 @@ Second arg is format: `csv | jsonl | fixed`
 - **Sinks** are mocked but simulate latency, batching, and occasional transient failures.
 - **Backpressure** is implemented using bounded queues and blocking producer behavior.
 
-  ## Non-Functional Characteristics
+## Non-Functional Characteristics
 - Performance: Optimized for throughput and constant memory usage
 - Reliability: Crash-safe via persistence
 - Scalability: Extensible architecture
