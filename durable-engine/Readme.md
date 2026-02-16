@@ -23,16 +23,13 @@ steps are not re-executed
 
 ## Architecture
 
-###App (Workflow Definition)
+App (Workflow Definition)
          ↓ 
-         
-###DurableExecutor (Core Engine)
+DurableExecutor (Core Engine)
          ↓
-         
-###StepStore(Persistence Layer)
+StepStore(Persistence Layer)
          ↓
-         
-###H2 Embedded Database
+H2 Embedded Database
 
 ------------------------------------------------------------------------
 
