@@ -87,6 +87,15 @@ Second arg is format: `csv | jsonl | fixed`
 - **Sinks** are mocked but simulate latency, batching, and occasional transient failures.
 - **Backpressure** is implemented using bounded queues and blocking producer behavior.
 
+  ## Non-Functional Characteristics
+- Performance: Optimized for throughput and constant memory usage
+- Reliability: Crash-safe via persistence
+- Scalability: Extensible architecture
+- Maintainability: Clean separation of concerns
+- Extensibility: Strategy pattern for pluggable sinks
+- Backpressure handling (Assignment 2)
+
+
 ## Future Improvements
 - Real HTTP/2 client + real gRPC stubs
 - Metrics (throughput, lag, retry counts)
