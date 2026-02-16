@@ -23,13 +23,35 @@ steps are not re-executed
 
 ## Architecture
 
-App (Workflow Definition)
-         ↓ 
-DurableExecutor (Core Engine)
-         ↓
-StepStore(Persistence Layer)
-         ↓
-H2 Embedded Database
++-----------------------+
+|        App            |
+| (Workflow Definition) |
++----------+------------+
+           |
+           v
++-----------------------+
+|   DurableExecutor     |
+|     (Core Engine)     |
+| - Logical clock       |
+| - Step execution      |
+| - Replay detection    |
++----------+------------+
+           |
+           v
++-----------------------+
+|      StepStore        |
+|  (Persistence Layer)  |
+| - Save step results   |
+| - Check step exists   |
+| - Retrieve result     |
++----------+------------+
+           |
+           v
++-----------------------+
+|   H2 Embedded DB      |
+|   (Persistent State)  |
++-----------------------+
+
 
 ------------------------------------------------------------------------
 
