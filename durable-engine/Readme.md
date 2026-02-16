@@ -24,38 +24,56 @@ steps are not re-executed
 ## Architecture
 
 ┌──────────────────────────────┐
+
 │ App │
+
 │ (Workflow Definition) │
+
 └───────────────┬──────────────┘
 
 │
 ▼
 
 ┌──────────────────────────────┐
+
 │ DurableExecutor │
+
 │ (Core Engine) │
+
 │ • Logical Clock │
+
 │ • Step Execution │
+
 │ • Replay Detection │
+
 └───────────────┬──────────────┘
 
 │
 ▼
 
 ┌──────────────────────────────┐
+
 │ StepStore │
+
 │ (Persistence Layer) │
+
 │ • Save Step Results │
+
 │ • Check Step Exists │
+
 │ • Retrieve Stored Result │
+
 └───────────────┬──────────────┘
 
 │
 ▼
 
 ┌──────────────────────────────┐
+
 │ H2 Embedded DB │
+
 │ (Persistent State) │
+
 └──────────────────────────────┘
 
 
